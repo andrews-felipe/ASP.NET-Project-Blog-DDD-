@@ -6,7 +6,7 @@ namespace ProjetoBlogDDD.Infra.Data.Contexto
     public class ProjetoModeloContexto : DbContext
     {
         public ProjetoModeloContexto()
-            :base("ProjetoModeloDDD")
+            :base("ProjetoBlogDDD")
         {
            
         }

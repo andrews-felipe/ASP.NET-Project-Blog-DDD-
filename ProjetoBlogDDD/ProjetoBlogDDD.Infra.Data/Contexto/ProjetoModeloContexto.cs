@@ -1,4 +1,5 @@
 ﻿using ProjetoBlogDDD.Dominio.Entidades;
+using ProjetoBlogDDD.Infra.Data.EntityConfig;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -34,6 +35,8 @@ namespace ProjetoBlogDDD.Infra.Data.Contexto
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(100));
+
+            modelBuilder.Configurations.Add(new UsuarioConfig());
         }
 
         public override int SaveChanges()

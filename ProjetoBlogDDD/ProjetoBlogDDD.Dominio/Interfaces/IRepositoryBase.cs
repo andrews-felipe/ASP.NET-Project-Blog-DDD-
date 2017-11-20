@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ProjetoBlogDDD.Infra.Data.Repository
 {
-    public interface RepositoryBase<TEntity> where TEntity : class
+    public interface IRepositoryBase<TEntity> where TEntity : class
     {
         void Add(TEntity obj);
 

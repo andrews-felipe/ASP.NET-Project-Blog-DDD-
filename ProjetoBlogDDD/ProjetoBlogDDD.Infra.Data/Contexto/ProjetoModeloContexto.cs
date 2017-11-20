@@ -17,6 +17,8 @@ namespace ProjetoBlogDDD.Infra.Data.Contexto
 
         public DbSet<Usuario> Usuarios { get; set; }
 
+        public DbSet<Post> Postagens { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,6 +39,8 @@ namespace ProjetoBlogDDD.Infra.Data.Contexto
                 .Configure(p => p.HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new UsuarioConfig());
+
+            modelBuilder.Configurations.Add(new PostConfig());
         }
 
         public override int SaveChanges()

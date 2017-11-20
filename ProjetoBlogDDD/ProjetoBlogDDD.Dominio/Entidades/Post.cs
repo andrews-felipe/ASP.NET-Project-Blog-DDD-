@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProjetoBlogDDD.Dominio.Entidades
 {
@@ -16,6 +13,10 @@ namespace ProjetoBlogDDD.Dominio.Entidades
         public DateTime DataCadastro { get; set; }
 
         public string Texto { get; set; }
+
+        public int UsuarioID { get; set; }
+
+        public virtual Usuario Usuario { get; set; }
 
     }
 }

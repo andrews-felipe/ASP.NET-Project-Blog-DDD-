@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
 
 namespace ProjetoBlogDDD.Dominio.Entidades
 {
@@ -14,6 +15,8 @@ namespace ProjetoBlogDDD.Dominio.Entidades
         public string Email { get; set; }
 
         public DateTime DataCadastro { get; set; }
+
+        public virtual IEnumerable<Post> Postagens { get; set; }
 
     }
 }

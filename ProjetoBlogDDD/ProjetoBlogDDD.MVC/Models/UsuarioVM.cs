@@ -12,7 +12,7 @@ namespace ProjetoBlogDDD.MVC.Models
 
         [Key]
 
-        public int usuarioID { get; set; }
+        public int UsuarioID { get; set; }
 
         [Required(ErrorMessage ="Prencha Campo Nome")]
         [MaxLength(150, ErrorMessage = "Limite Máximo Excedido")]

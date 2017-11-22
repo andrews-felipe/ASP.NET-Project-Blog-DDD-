@@ -34,6 +34,7 @@ namespace ProjetoBlogDDD.MVC.Controllers
 
         // POST: Post/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(PostVM post)
         {
             if (ModelState.IsValid)

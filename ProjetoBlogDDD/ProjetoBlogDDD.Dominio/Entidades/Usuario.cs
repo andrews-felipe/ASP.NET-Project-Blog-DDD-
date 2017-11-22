@@ -8,7 +8,7 @@ namespace ProjetoBlogDDD.Dominio.Entidades
     public class Usuario
     {
 
-        public int usuarioID { get; set; }
+        public int UsuarioID { get; set; }
 
         public string Nome { get; set; }
 

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProjetoBlogDDD.MVC.Models.PostVM>
+
+@{
+    ViewBag.Title = "Publicações";
+}
+
+<h2>Publicações</h2>
+
+    <p>
+        @Html.ActionLink("Criar Nova Publicação", "Create")
+    </p>
+
+
+@foreach (var item in Model)
+{
+    <h1>@Html.DisplayFor(modelItem => item.Titulo)</h1>
+
+    <p>@Html.DisplayFor(modelItem => item.Texto)</p>
+
+    <table>
+
+        <tr>
+            <th>@Html.DisplayFor(modelItem => item.Usuario)</th>
+            <th>@Html.DisplayFor(modelItem => item.DataCadastro)</th>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PostID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PostID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PostID })
+            </td>
+        </tr>
+    </table>
+}

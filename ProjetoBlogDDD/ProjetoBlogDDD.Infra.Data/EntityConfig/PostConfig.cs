@@ -17,6 +17,10 @@ namespace ProjetoBlogDDD.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasMaxLength(250);
 
+            Property(p => p.Texto)
+                .IsRequired()
+                .HasMaxLength(1200);
+
             HasRequired(p => p.Usuario)
                 .WithMany()
                 .HasForeignKey(p => p.UsuarioID);

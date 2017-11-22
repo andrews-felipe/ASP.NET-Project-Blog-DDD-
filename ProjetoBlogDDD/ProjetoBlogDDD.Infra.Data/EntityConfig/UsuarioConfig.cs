@@ -9,7 +9,7 @@ namespace ProjetoBlogDDD.Infra.Data.EntityConfig
 
         public UsuarioConfig()
         {
-            HasKey(u => u.usuarioID);
+            HasKey(u => u.UsuarioID);
 
             Property(u => u.Nome)
                 .IsRequired()

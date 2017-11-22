@@ -143,6 +143,8 @@
     <Compile Include="AutoMapper\DomainToViewModelMapperProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMapperProfile.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,9 +187,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\IndexPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -206,6 +212,10 @@
     <ProjectReference Include="..\ProjetoBlogDDD.Dominio\ProjetoBlogDDD.Dominio.csproj">
       <Project>{dcbb5de0-bff4-41ed-8159-4e0d9138ed46}</Project>
       <Name>ProjetoBlogDDD.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoBlogDDD.Infra.Data\ProjetoBlogDDD.Infra.Data.csproj">
+      <Project>{0FB5301B-1E6A-44B5-8984-CC730FCB921C}</Project>
+      <Name>ProjetoBlogDDD.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
